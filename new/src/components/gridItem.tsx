@@ -1,5 +1,8 @@
 import LinearProgress from '@mui/material/LinearProgress';
 
+import * as React from "react";
+import {Link} from "react-router-dom";
+
 import { 
     Card,
     CardHeader,
@@ -14,6 +17,7 @@ import Box from '@mui/material/Box';
 export default function GridItemCard() {
     return(<>
     <Grid item sm={3} sx={{ display: "flex", mt:"8px" }}>
+      <Link style={{textDecoration: 'none'}} to="/ProyectoEnVenta">
         <Card sx={{
             display:"flex",
             flexDirection:"column",
@@ -89,6 +93,7 @@ export default function GridItemCard() {
             </Box>
           </CardContent>
         </Card>
+        </Link>
       </Grid>   
     </>)
 }
