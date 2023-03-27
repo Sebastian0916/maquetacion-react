@@ -12,7 +12,7 @@ import {Link} from "react-router-dom";
 
 export default function NavBarProyecto() {return(
     <>
-    <Box sx={{ width: "1204px"}}> 
+    <Box sx={{ width: "1204px" , mx:"auto"}}> 
       <Stack
         flexDirection="column"
         sx={{ backgroundColor: "white" }}

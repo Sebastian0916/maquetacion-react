@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid";
-import GridItemCard from "../components/gridItem";
+import GridItemCard from "../components/gridItemPortoAllegre";
 import NavBarProyectos from "../components/navBar-Proyectos";
 import { Box } from "@mui/system";
 

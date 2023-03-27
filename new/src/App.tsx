@@ -5,15 +5,17 @@ import ProyectosEnVenta from "./pages/Proyectos-en-venta";
 import ProyectoEnVenta from "./pages/proyecto-en-venta";
 
 
+
 function App() {
 
   return (
-    <Box sx={{width:"1204px", mx:"auto"}}>
-    <Routes>
-        <Route path="/" element={<ProyectosEnVenta />} />
-        <Route path="/ProyectoEnVenta" element={<ProyectoEnVenta />} />
-    </Routes>
-    </Box>
+    // This box is only for dev purposes, it is removable in any moment
+      <Box sx={{ width: "1204px", mx:"auto" }}>
+        <Routes>
+          <Route path="/" element={<ProyectosEnVenta />} />
+          <Route path="/ProyectoEnVenta" element={<ProyectoEnVenta />} />
+        </Routes>
+      </Box>
   );
 }
 

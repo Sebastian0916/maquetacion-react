@@ -13,7 +13,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function NavBarProyectos() {return(
     <>
-    <Box sx={{ width: "1204px"}}> 
+    <Box sx={{ width: "1204px" , mx:"auto"}}> 
       <Stack
         flexDirection="column"
         sx={{ backgroundColor: "white" }}
