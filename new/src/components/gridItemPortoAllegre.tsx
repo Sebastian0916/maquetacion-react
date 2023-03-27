@@ -14,10 +14,12 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import image10 from "../assets/image10.png"
+
 export default function GridItemCard() {
   return (<>
     <Grid item sm={3} sx={{ display: "flex", mt: "8px" }}>
-      <Link style={{ textDecoration: 'none' }} to="/ProyectoEnVenta">
+      <Link style={{ textDecoration: 'none' }} to="/ProyectoEnVentaMap">
         <Card sx={{
           display: "flex",
           flexDirection: "column",
@@ -61,7 +63,7 @@ export default function GridItemCard() {
               ><CardMedia
                   component="img"
                   height="100"
-                  image="https://via.placeholder.com/100"
+                  image={image10}
                   alt="Reserva de San David"
                 /></Box>
             </Box>

@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
+import { Typography } from '@mui/material';
 
 const options = ['Chicala Etapa 1 - Altos de Montecielo del norte I', 'Chicala Etapa 1 - Altos de Montecielo del norte II','Chicala Etapa 1 - Altos de Montecielo del norte III','Chicala Etapa 1 - Altos de Montecielo del norte IV','Chicala Etapa 1 - Altos de Montecielo del norte V','Chicala Etapa 1 - Altos de Montecielo del norte VI','Chicala Etapa 1 - Altos de Montecielo del norte VII'];
 
@@ -45,9 +46,9 @@ export default function SplitButton() {
 
   return (
     <React.Fragment>
-      <ButtonGroup sx={{width:"220px", height:"37px"}} variant="contained" ref={anchorRef} aria-label="split button">
-        <Button sx={{width:"180px", overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis"}} onClick={handleClick}>{options[selectedIndex]}</Button>
-        <Button
+      <ButtonGroup sx={{width:"272px", height:"37px"}} variant="contained" ref={anchorRef} aria-label="split button">
+        <Button sx={{width:"220px"}} onClick={handleClick}><Typography sx={{width:"188px", overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis"}}>{options[selectedIndex]}</Typography></Button>
+        <Button sx={{width:"52px"}}
           size="small"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}

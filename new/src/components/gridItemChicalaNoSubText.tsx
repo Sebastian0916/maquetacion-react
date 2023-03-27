@@ -7,11 +7,12 @@ import {
   Grid,
   Typography,
   Stack,
+  Box,
 } from "@mui/material";
 
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 
-export default function GridItemCardChicala() {
+export default function GridItemCardChicalaNoSubText() {
   return (<>
     <Grid item sm={3} sx={{ display: "flex", mt: "8px" }}>
         <Card sx={{
@@ -48,7 +49,7 @@ export default function GridItemCardChicala() {
             height: "154px",
           }} >
             <Typography variant="subtitle2" color="primary">Características</Typography>
-            <Typography title="Área contruida de 45,42 + 3 baños  + 5 habitaciones + patio privado en exclusiva zona de la ciudad." variant="body1" sx={{mb:"4px"}} color="text.secondary">Área construida de 45,42 m + 3 baños  + 5 habitaciones en exclusiva zona...</Typography>
+            <Box sx={{height:"40px"}}></Box>
             <Stack sx={{flexDirection:"row", gap:"4px"}}>
              <Stack sx={{borderRadius:"8px", p:"12px", width:"81.83px", height:"32px", alignItems:"center", backgroundColor:"#C3E58F"}}>
               <Typography variant="caption" color="text.primary" sx={{fontSize:"10px!important", mb:"4px"}}>Disponibles</Typography>
