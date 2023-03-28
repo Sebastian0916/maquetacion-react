@@ -1,4 +1,4 @@
-import { Autocomplete, Box, Button, Menu, MenuItem, CardMedia, Fab, Grid, InputAdornment, Radio, RadioGroup, Stack, TextField, Typography } from "@mui/material";
+import { Autocomplete, Box, CardMedia, Fab, Grid, InputAdornment, Radio, RadioGroup, Stack, TextField, Typography } from "@mui/material";
 import NavBarProyecto from "../components/navBar-Proyecto";
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import SearchIcon from '@mui/icons-material/Search';
@@ -7,21 +7,12 @@ import GridItemCardChicala from "../components/gridItemChicala";
 import GridItemCardChicalaNoSubText from "../components/gridItemChicalaNoSubText";
 import { Link } from "react-router-dom";
 import image11 from "../../src/assets/image11.jpg"
-import { useState } from "react";
 import * as React from 'react';
+import RelativeMenuMap1 from "../components/relative-menu-map1";
+import RelativeMenuMap2 from "../components/relative-menu-map2";
+import RelativeMenuMap3 from "../components/relative-menu-map3";
 
 export default function ProyectoEnVentaMap() {
-
-    const [openMenu, setOpenMenu] = useState(false)
-
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
     return (<>
         <NavBarProyecto />
@@ -69,62 +60,22 @@ export default function ProyectoEnVentaMap() {
         </Box>
         <Grid>
 
-            <Grid item sm={6} sx={{ display: "flex", float: "left" }}>
-                <Box sx={{ width: "563px", height: "450px" }}>
+            <Grid item sm={6} sx={{ display: "flex", float: "left", ml:"16px" }}>
+                <Box sx={{ width: "563px", height: "459px", position: "absolute" }}>
                     <CardMedia
+                        sx={{ position: "absolute" }}
                         component="img"
                         image={image11}
                         alt="Apartamentos Chicala"
                     ></CardMedia>
-                    <Radio sx={{ top: "-412.12px", color: "#fff", '&.Mui-checked': { color: "#fff" }, left: "42.12px" }} onMouseEnter={() => setOpenMenu(true)}></Radio>
-                    {openMenu && <Box>
-                        <Button
-                            size="large"
-                            variant="text"
-                            sx={{ top: "-442.12px", left: "70.12px", backgroundColor:"#fff",
-                            boxShadow: "0px 1px 3px rgba(24, 39, 75, 0.12), 0px 1px 1px -1px rgba(24, 39, 75, 0.14), 0px 2px 1px -2px rgba(24, 39, 75, 0.2)",}}
-                            id="basic-button"
-                            aria-controls={open ? 'basic-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? 'true' : undefined}
-                            onClick={handleClick}       
-                        >
-                        <Typography variant="subtitle2" color="text.primary">
-                            Chicala 1
-                        </Typography>    
-                        </Button>
-                        <Menu
-                            sx={{".MuiMenu-list":{width:"367px"}}}
-                            id="basic-menu"
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                        >
-                            <MenuItem onClick={handleClose}>
-                            <Typography  variant="subtitle2" color="text.primary">
-                            Chicala 1
-                            </Typography>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                            <Typography variant="subtitle2" color="text.primary">
-                            Chicala 2
-                            </Typography>    
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                            <Typography variant="subtitle2" color="text.primary">
-                            Chicala 3
-                            </Typography>    
-                            </MenuItem>
-                        </Menu>
-                    </Box>}
-                    <Radio sx={{ top: "-322.12px", color: "#fff", '&.Mui-checked': { color: "#fff" }, left: "220.12px" }}></Radio>
-                    <Radio sx={{ top: "-245.12px", color: "#fff", '&.Mui-checked': { color: "#fff" }, left: "332.12px" }}></Radio>
+                    <Box sx={{ width: "563px", height: "459px", position: "relative" }}>
+                        <RelativeMenuMap1 />
+                        <RelativeMenuMap2 />
+                        <RelativeMenuMap3 />
+                    </Box>
                 </Box>
             </Grid>
-            <Grid item sm={6} sx={{ display: "flex", float: "right", mx: "auto" }}>
+            <Grid item sm={6} sx={{overflow:"scroll", height:"521px", display: "flex", float: "right", mx: "auto", mr:"16px" }}>
                 <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
 
                     <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "588px" }}>

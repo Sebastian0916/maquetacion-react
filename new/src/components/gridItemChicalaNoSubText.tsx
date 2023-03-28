@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/material";
 
-import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
+import DialogBlueprint from "./dialog-blueprint";
 
 export default function GridItemCardChicalaNoSubText() {
   return (<>
@@ -37,7 +37,7 @@ export default function GridItemCardChicalaNoSubText() {
 
             title={
               <Typography sx={{display:"flex", alignItems:"center", justifyContent:"space-between"}} title="Chicala E1 - Apartamento tipo B - Área 45 mts2" variant="h6" color={"text.primary"}>
-                Chicala E1 - Apartamento ti...<MapOutlinedIcon color="primary" />
+                Chicala E1 - Apartamento ti... <DialogBlueprint/>
               </Typography>
             }
           />
