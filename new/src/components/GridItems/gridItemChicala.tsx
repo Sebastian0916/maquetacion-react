@@ -8,7 +8,7 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import DialogBlueprint from "./dialog-blueprint";
+import DialogBlueprint from "../Dialogs/dialog-blueprint-byIconButton";
 
 export default function GridItemCardChicala() {
   return (<>

@@ -14,7 +14,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import image10 from "../assets/image10.png"
+import image10 from "../../assets/image10.png"
 
 export default function GridItemCard() {
   return (<>

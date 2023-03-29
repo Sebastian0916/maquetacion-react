@@ -10,7 +10,7 @@ import {
   Box,
 } from "@mui/material";
 
-import DialogBlueprint from "./dialog-blueprint";
+import DialogBlueprint from "../Dialogs/dialog-blueprint-byIconButton";
 
 export default function GridItemCardChicalaNoSubText() {
   return (<>
@@ -49,7 +49,7 @@ export default function GridItemCardChicalaNoSubText() {
             height: "154px",
           }} >
             <Typography variant="subtitle2" color="primary">Características</Typography>
-            <Box sx={{height:"40px"}}></Box>
+            <Box sx={{height:"39.19px", mb:"4px"}}></Box>
             <Stack sx={{flexDirection:"row", gap:"4px"}}>
              <Stack sx={{borderRadius:"8px", p:"12px", width:"81.83px", height:"32px", alignItems:"center", backgroundColor:"#C3E58F"}}>
               <Typography variant="caption" color="text.primary" sx={{fontSize:"10px!important", mb:"4px"}}>Disponibles</Typography>

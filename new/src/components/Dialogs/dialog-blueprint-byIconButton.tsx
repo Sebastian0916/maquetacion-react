@@ -9,7 +9,7 @@ import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { CardMedia } from '@mui/material';
-import Image13 from '../assets/image13.png'
+import Image13 from '../../assets/image13.png'
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {

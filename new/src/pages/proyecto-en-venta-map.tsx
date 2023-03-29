@@ -1,16 +1,16 @@
 import { Autocomplete, Box, CardMedia, Fab, Grid, InputAdornment, Radio, RadioGroup, Stack, TextField, Typography } from "@mui/material";
-import NavBarProyecto from "../components/navBar-Proyecto";
+import NavBarProyecto from "../components/navBars/navBar-Proyecto";
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import SearchIcon from '@mui/icons-material/Search';
-import SplitButton from "../components/Button-group";
-import GridItemCardChicala from "../components/gridItemChicala";
-import GridItemCardChicalaNoSubText from "../components/gridItemChicalaNoSubText";
+import SplitButton from "../components/Buttons/Button-group";
+import GridItemCardChicala from "../components/GridItems/gridItemChicala";
+import GridItemCardChicalaNoSubText from "../components/GridItems/gridItemChicalaNoSubText";
 import { Link } from "react-router-dom";
 import image11 from "../../src/assets/image11.jpg"
 import * as React from 'react';
-import RelativeMenuMap1 from "../components/relative-menu-map1";
-import RelativeMenuMap2 from "../components/relative-menu-map2";
-import RelativeMenuMap3 from "../components/relative-menu-map3";
+import RelativeMenuMap1 from "../components/Relative/relative-menu-map1";
+import RelativeMenuMap2 from "../components/Relative/relative-menu-map2";
+import RelativeMenuMap3 from "../components/Relative/relative-menu-map3";
 
 export default function ProyectoEnVentaMap() {
 
@@ -75,10 +75,10 @@ export default function ProyectoEnVentaMap() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid item sm={6} sx={{overflow:"scroll", height:"521px", display: "flex", float: "right", mx: "auto", mr:"16px" }}>
+            <Grid item sm={6} sx={{overflowY:"scroll", width:"588px", height:"487px", display: "flex", float: "right", mr:"16px"}}>
                 <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
 
-                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "588px" }}>
+                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "578px" }}>
 
                         <GridItemCardChicala />
 
@@ -86,7 +86,7 @@ export default function ProyectoEnVentaMap() {
 
                     </Box>
 
-                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "588px" }}>
+                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "578px" }}>
 
                         <GridItemCardChicalaNoSubText />
 
@@ -94,7 +94,7 @@ export default function ProyectoEnVentaMap() {
 
                     </Box>
 
-                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "588px" }}>
+                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "578px" }}>
 
                         <GridItemCardChicala />
 
@@ -102,7 +102,7 @@ export default function ProyectoEnVentaMap() {
 
                     </Box>
 
-                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "588px" }}>
+                    <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-end", p: "0", gap: "8px", mx: "auto", width: "578px" }}>
 
                         <GridItemCardChicalaNoSubText />
 

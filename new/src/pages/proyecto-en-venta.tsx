@@ -1,10 +1,10 @@
 import { Autocomplete, Box, Fab, Grid, InputAdornment, Stack, TextField, Typography } from "@mui/material";
-import NavBarProyecto from "../components/navBar-Proyecto";
+import NavBarProyecto from "../components/navBars/navBar-Proyecto";
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import SearchIcon from '@mui/icons-material/Search';
-import SplitButton from "../components/Button-group";
-import GridItemCardChicala from "../components/gridItemChicala";
-import GridItemCardChicalaNoSubText from "../components/gridItemChicalaNoSubText";
+import SplitButton from "../components/Buttons/Button-group";
+import GridItemCardChicala from "../components/GridItems/gridItemChicala";
+import GridItemCardChicalaNoSubText from "../components/GridItems/gridItemChicalaNoSubText";
 import { Link } from "react-router-dom";
 
 
@@ -53,7 +53,7 @@ export default function ProyectoEnVenta() {
                 </Stack>
             </Box>
         </Box>
-        <Grid sx={{height:"521px", overflowY:"scroll"}}>
+        <Grid sx={{height:"487px", overflowY:"scroll"}}>
 
             <Box sx={{ display: "flex", flexDirection: "row", alignItems: "flex-start", p: "0", gap: "8px", mx: "auto", width: "1166px" }}>
 
