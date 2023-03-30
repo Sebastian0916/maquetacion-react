@@ -5,6 +5,7 @@ import ProyectosEnVenta from "./pages/Proyectos-en-venta";
 import ProyectoEnVenta from "./pages/proyecto-en-venta";
 import ProyectoEnVentaMap from "./pages/proyecto-en-venta-map";
 import SeleccionDelInmueble from "./pages/seleccion-del-inmueble";
+import Cotizacion from "./pages/cotizacion";
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/ProyectoEnVenta" element={<ProyectoEnVenta />} />
           <Route path="/ProyectoEnVentaMap" element={<ProyectoEnVentaMap />} />
           <Route path="/SeleccionDelInmueble" element={<SeleccionDelInmueble />} />
+          <Route path="/Cotizacion" element={<Cotizacion />} />
         </Routes>
       </Box>
   );

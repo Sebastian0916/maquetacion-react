@@ -1,41 +1,38 @@
 import NavBarSeleccionInmueble from "../components/navBars/navBar-SeleccionInmueble";
-import { Card, CardContent, Divider, Box } from "@mui/material";
+import { Card, CardContent, Divider, Box, Checkbox, FormControlLabel } from "@mui/material";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import BlueprintThumbnail from "../components/Dialogs/dialog-blueprint-bythumb";
-import Chips from "../components/GridItems/Chips";
-import CheckFilters from "../components/Filters/CheckFilters";
+import Chips from "../components/GridItems/Chips/Chips";
+import ChipsLessAvailable from "../components/GridItems/Chips/Chips-less-available";
+import ChipsOnlyAvailable from "../components/GridItems/Chips/Chips-only-available";
+import ChipsLessReserved from "../components/GridItems/Chips/Chips-less-reserved";
+import ChipsLessSelled from "../components/GridItems/Chips/Chips-less-selled";
+import ChipsOnlyReserved from "../components/GridItems/Chips/Chips-only-reserved";
+import ChipsOnlySelled from "../components/GridItems/Chips/Chips-only-selled";
+import ChipsEmptyState from "../components/GridItems/Chips/Chips-empty-state";
+
 export default function SeleccionDelInmueble() {
 
-    // const InitialStateTodos = [
-    //     {id:1 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //     {id:2 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //     {id:3 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //     {id:4 label:"APT 203 - TORRE 1 $000,000,000",color:info   },
-    //     {id:5 label:"APT 203 - TORRE 1 $000,000,000",color:info   },
-    //     {id:6 label:"APT 203 - TORRE 1 $000,000,000",color:info   },
-    //     {id:7 label:"APT 203 - TORRE 1 $000,000,000",color:info   },
-    //     {id:4 label:"APT 203 - TORRE 1 $000,000,000",color:error  },
-    //     {id:5 label:"APT 203 - TORRE 1 $000,000,000",color:error  },
-    //     {id:6 label:"APT 203 - TORRE 1 $000,000,000",color:error  },
-    //     {id:7 label:"APT 203 - TORRE 1 $000,000,000",color:error  },
-    //     {id:4 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //     {id:5 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //     {id:6 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //     {id:7 label:"APT 203 - TORRE 1 $000,000,000",color:success},
-    //   ]
+    const [checked1, setChecked1] = React.useState(true);
 
-    // const [filter, setFilter] = React.useState("all");
+    const handleCheck1 = () => {
+        setChecked1(!checked1); 
+    };
 
-    // const changeFilter = (filter) => setFilter(filter)
+    const [checked2, setChecked2] = React.useState(true);
 
-    // const filteredChips = ()=>{
-    //   switch (filter){
-    //     case "all":return chips;
-    //   }
-    // }
+    const handleCheck2 = () => {
+        setChecked2(!checked2); 
+    };
+
+    const [checked3, setChecked3] = React.useState(true);
+
+    const handleCheck3 = () => {
+        setChecked3(!checked3); 
+    };
 
     const [value, setValue] = React.useState(0);
 
@@ -72,18 +69,26 @@ export default function SeleccionDelInmueble() {
                         <Typography variant="subtitle2" color="text.secondary">Área construida 45,42mts m2 aprox Área Privada 39.80 aprox</Typography>
                     </Box>
                     <Box sx={{ px: "14.5px" }}>
-                        <BlueprintThumbnail></BlueprintThumbnail>
+                        <BlueprintThumbnail />
                     </Box>
                 </CardContent>
             </Card>
             <Box sx={{ mx: "auto", width: "876px", height: "64px", display: "flex", justifyContent: "flex-end", p: "16px 0 16px 16px", gap: "4px" }}>
-                <CheckFilters />
-                {/* changeFilter={changeFilter} filter={filter} */}
+                <FormControlLabel onChange={handleCheck1} control={<Checkbox defaultChecked />} label="Disponible" />
+                <FormControlLabel onChange={handleCheck2} control={<Checkbox defaultChecked />} label="Reservado" />
+                <FormControlLabel onChange={handleCheck3} control={<Checkbox defaultChecked />} label="Vendido" />
             </Box>
-            <Box sx={{ mx: "auto", width: "876px", display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                <Chips/>
-                {/* chips={filteredChips()} */}
-            </Box>
+           
+            {checked1 && checked2 && checked3 && <Chips></Chips>}
+            {!checked1 && checked2 && checked3 && <ChipsLessAvailable></ChipsLessAvailable>}
+            {checked1 && !checked2 && checked3 && <ChipsLessReserved></ChipsLessReserved>}
+            {checked1 && checked2 && !checked3 && <ChipsLessSelled></ChipsLessSelled>}
+            {checked1 && !checked2 && !checked3 && <ChipsOnlyAvailable></ChipsOnlyAvailable>}
+            {!checked1 && checked2 && !checked3 && <ChipsOnlyReserved></ChipsOnlyReserved>}
+            {!checked1 && !checked2 && checked3 && <ChipsOnlySelled></ChipsOnlySelled>}
+            {!checked1 && !checked2 && !checked3 && <ChipsEmptyState></ChipsEmptyState>}
+                
+
         </Box>
     </>)
 }
