@@ -5,6 +5,7 @@ import Image13Med from "../assets/image13-md.png"
 import * as React from 'react';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DialogChipByIconButton from "../components/Dialogs/dialog-chips-byIconButton";
+import DialogPersonalDataByIconButton from "../components/Dialogs/dialog-personalData-byButton";
 
 const options = ['Seleccione una opción'];
 const options1 = ['Seleccione una opción'];
@@ -210,7 +211,7 @@ export default function Cotizacion() {
                                     />
                                 </FormControl>
                                 <Box sx={{width:"233px", display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"flex-start", gap:"12px"}}>
-                                <FormControlLabel control={<Checkbox defaultChecked />} label="Pago de contado" />
+                                <FormControlLabel control={<Checkbox />} label="Pago de contado" />
                                 </Box>
                             </Box>
                             <Box sx={{ width: "707px", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "4px" }}>
@@ -313,9 +314,7 @@ export default function Cotizacion() {
                             </Box>
                     </CardContent>
                 </Card>
-                <Button variant="contained">
-                    Detalle Cotización
-                </Button>
+                <DialogPersonalDataByIconButton/>
             </Box>
             <Card sx={{ width: "415px", height: "404px", backgroundColor: "#fff", display: "flex", flexDirection: "column", alignItems: "flex-start", float: "right" }}>
                 {/* <CardHeader> */}

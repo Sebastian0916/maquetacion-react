@@ -1,76 +1,17 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
-import PersonIcon from '@mui/icons-material/Person';
-import AddIcon from '@mui/icons-material/Add';
-import { IconButton } from "@mui/material";
+
+import { Alert, Box, Button, Chip, DialogActions, DialogContent, IconButton } from "@mui/material";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Typography from '@mui/material/Typography';
-import { blue } from '@mui/material/colors';
 
-const emails = ['username@gmail.com', 'user02@gmail.com'];
 
-export interface SimpleDialogProps {
-  open: boolean;
-  selectedValue: string;
-  onClose: (value: string) => void;
-}
-
-function SimpleDialog(props: SimpleDialogProps) {
-  const { onClose, selectedValue, open } = props;
-
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value: string) => {
-    onClose(value);
-  };
-
-  return (
-    <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>Unidades añadidas</DialogTitle>
-      {/* <List sx={{ pt: 0 }}>
-        {emails.map((email) => (
-          <ListItem disableGutters>
-            <ListItemButton onClick={() => handleListItemClick(email)} key={email}>
-              <ListItemAvatar>
-                <Avatar sx={{ bgcolor: blue[100], color: blue[600] }}>
-                  <PersonIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={email} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-        <ListItem disableGutters>
-          <ListItemButton
-            autoFocus
-            onClick={() => handleListItemClick('addAccount')}
-          >
-            <ListItemAvatar>
-              <Avatar>
-                <AddIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Add account" />
-          </ListItemButton>
-        </ListItem>
-      </List> */}
-    </Dialog>
-  );
-}
+const handleDelete = () => { };
 
 export default function DialogChipByIconButton() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -78,7 +19,6 @@ export default function DialogChipByIconButton() {
 
   const handleClose = (value: string) => {
     setOpen(false);
-    setSelectedValue(value);
   };
 
   return (<>
@@ -86,11 +26,52 @@ export default function DialogChipByIconButton() {
 
     <IconButton onClick={handleClickOpen} size="small"><VisibilityIcon fontSize="inherit"></VisibilityIcon></IconButton>
 
-      <SimpleDialog
-        selectedValue={selectedValue}
-        open={open}
-        onClose={handleClose}
-      />
- 
- </>);
+    <Dialog
+      sx={{
+        "& .MuiDialog-container": {
+          "& .MuiPaper-root": {
+            maxWidth: "444px",
+          },
+        },
+      }}
+      open={open}
+      onClose={handleClose}
+    >
+      <DialogTitle>
+        <Typography variant="h3" color="text.primary"> Unidades añadidas </Typography>
+      </DialogTitle>
+      <DialogContent sx={{ height: "113px", overflowY: "scroll", display: "flex", justifyContent: "center", flexDirection: "column", gap: "4px" }}>
+        <Box sx={{height:"90px"}}>
+        <Alert severity="info"
+        >
+          Recuerda que al seleccionar una unidad esta quedará reservada a la visita.
+        </Alert>
+        <Box sx={{ display: "flex", gap: "4px", flexWrap: "wrap", mt:"8px" }}>
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+          <Chip sx={{ width: '127.3px' }} size="small" label="APT 203 - TOR..." title="APT 203 - Torre 1 - Unidad 6" onDelete={handleDelete} />
+        </Box>
+        </Box>
+      </DialogContent>
+      <DialogActions sx={{height:"42px"}}>
+        <Button onClick={()=>setOpen(false)} variant="text">
+          Cancelar
+        </Button>
+        <Button onClick={()=>setOpen(false)} variant="contained">
+          Guardar
+        </Button>
+        
+      </DialogActions>
+    </Dialog>
+
+  </>);
 }
