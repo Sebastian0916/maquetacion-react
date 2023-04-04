@@ -6,6 +6,7 @@ import * as React from 'react';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DialogChipByIconButton from "../components/Dialogs/dialog-chips-byIconButton";
 import DialogPersonalDataByIconButton from "../components/Dialogs/dialog-personalData-byButton";
+import { Link } from "react-router-dom";
 
 const options = ['Seleccione una opción'];
 const options1 = ['Seleccione una opción'];
@@ -314,7 +315,10 @@ export default function Cotizacion() {
                             </Box>
                     </CardContent>
                 </Card>
-                <DialogPersonalDataByIconButton/>
+                {/* <DialogPersonalDataByIconButton/> */}
+                <Link style={{textDecoration: 'none'}} to="/CotizacionVPN">
+                    <Button variant="contained">Detalle Cotización</Button>
+                </Link>
             </Box>
             <Card sx={{ width: "415px", height: "404px", backgroundColor: "#fff", display: "flex", flexDirection: "column", alignItems: "flex-start", float: "right" }}>
                 {/* <CardHeader> */}
