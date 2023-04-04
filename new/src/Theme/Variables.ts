@@ -93,82 +93,88 @@ export const themeOptions: ThemeOptions = {
   },
   typography: {
     body1: {
+      fontFamily: "Roboto, sans-serif",
       fontSize: "14px !important",
       fontWeight: 400,
       letterSpacing: 0.15,
       lineHeight: 1.4,
     },
     body2: {
+      fontFamily: "Roboto,sans-serif",
       fontSize: "13px !important",
       fontWeight: 400,
       letterSpacing: 0.17,
       lineHeight: 1.2,
     },
     subtitle1: {
+      fontFamily: "Roboto,sans-serif",
       fontSize: "14px !important",
       fontWeight: 500,
       letterSpacing: 0.15,
       lineHeight: 1.4,
     },
     subtitle2: {
+      fontFamily: "Roboto,sans-serif",
       fontSize: "13px !important",
       fontWeight: 500,
       letterSpacing: 0.1,
       lineHeight: 1.4,
     },
     caption: {
+      fontFamily: "Roboto, sans-serif",
       fontSize: "11px !important",
       fontWeight: 400,
       letterSpacing: 0.4,
       lineHeight: 1.1,
     },
     overline: {
+      fontFamily: "Roboto, sans-serif",
       fontSize: 1.1,
       fontWeight: 400,
       letterSpacing: 1,
       lineHeight: 2.66,
     },
     h6: {
-      fontFamily: "Nunito",
+      fontFamily: "Nunito, sans-serif ",
       fontSize: "16px !important",
       fontWeight: 500,
       lineHeight: 1.6,
     },
     h5: {
-      fontFamily: "Nunito",
+      fontFamily: "Nunito, sans-serif ",
       fontSize: "18px !important",
       fontWeight: 600,
       lineHeight: 1.8,
     },
     h4: {
-      fontFamily: "Nunito",
+      fontFamily: "Nunito, sans-serif ",
       fontSize: "20px !important",
       fontWeight: 600,
       letterSpacing: 0.25,
       lineHeight: 1,
     },
     h3: {
-      fontFamily: "Nunito",
+      fontFamily: "Nunito, sans-serif ",
       fontSize: "28px !important",
       fontWeight: 500,
       lineHeight: 1.2,
     },
     h2: {
-      fontFamily: "Nunito",
+      fontFamily: "Nunito ",
       fontSize: "32px !important",
       fontWeight: 400,
       letterSpacing: -0.5,
       lineHeight: 1.2,
     },
     h1: {
-      fontFamily: "Nunito",
+      fontFamily: "Nunito, sans-serif ",
       fontSize: "40px !important",
       fontWeight: 300,
       letterSpacing: -1.5,
       lineHeight: 1.4,
     },
-    button:{
-      textTransform:'unset'
+    button: {
+      textTransform: "unset",
     },
     fontWeightLight: 300,
   },
@@ -197,12 +203,26 @@ export const themeOptions: ThemeOptions = {
         },
       },
     },
-    MuiAutocomplete: {
-      defaultProps: {},
-    },
     MuiButton: {
       defaultProps: {
         size: "small",
+      },
+      styleOverrides: {
+        sizeSmall: {
+          height: 26,
+          fontSize: 12,
+        },
+        sizeMedium: {
+          height: 32,
+          fontSize: 13,
+        },
+        sizeLarge: {
+          height: 38,
+          fontSize: 14,
+        },
+        root: {
+          width: "fit-content",
+        },
       },
     },
     MuiButtonGroup: {
@@ -222,8 +242,8 @@ export const themeOptions: ThemeOptions = {
     },
     MuiFormControl: {
       defaultProps: {
-        margin: "none",
         size: "small",
+        margin: "none",
       },
     },
 
@@ -237,41 +257,64 @@ export const themeOptions: ThemeOptions = {
         size: "small",
       },
     },
+
+    MuiFilledInput: {
+      styleOverrides: {
+        sizeSmall: {
+          height: 38,
+        },
+      },
+    },
+    MuiInputBase: {
+      defaultProps: {
+        margin: "none",
+      },
+    },
     MuiOutlinedInput: {
       styleOverrides: {
+        sizeSmall: {
+          height: 32,
+        },
         notchedOutline: {
           borderColor: "rgba(16, 24, 64, 0.23)",
         },
       },
     },
-    MuiInputBase: {
-      styleOverrides: {
-        sizeSmall: {
-          "& .MuiOutlinedInput-input": {
-            padding: "7px 13px",
-          },
-        },
-      },
+    MuiAutocomplete: {
       defaultProps: {
-        margin: "none",
+        size: "small",
+      },
+      styleOverrides: {
+        root: {
+          "&.MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input":
+            {
+              paddingBlock: 1,
+            },
+        },
       },
     },
     MuiInputLabel: {
       styleOverrides: {
-        sizeSmall: {
-          "&.MuiInputLabel-shrink": {
-            top: 5,
-          },
-          lineHeight: "17px",
-        },
         outlined: {
-          "&.Mui-focused ": {
-            top: 4.2,
+          "&.MuiInputLabel-outlined.MuiInputLabel-sizeSmall ": {
+            transform: "translate(14px, 6px) scale(1)",
+          },
+          "&.MuiInputLabel-outlined ": {
+            "&.MuiInputLabel-shrink": {
+              transform: "translate(14px, -7px) scale(0.75)",
+            },
           },
         },
       },
       defaultProps: {
         margin: "dense",
+      },
+    },
+    MuiCardHeader: {
+      styleOverrides: {
+        root: {
+          padding: 12,
+        },
       },
     },
     MuiRadio: {
@@ -286,8 +329,8 @@ export const themeOptions: ThemeOptions = {
     },
     MuiTextField: {
       defaultProps: {
-        margin: "none",
         size: "small",
+        margin: "none",
       },
     },
     MuiList: {
