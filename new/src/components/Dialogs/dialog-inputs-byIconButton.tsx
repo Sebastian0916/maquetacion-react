@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
+import { useSnackbar } from "notistack";
 
 import { Box, Button, DialogActions, DialogContent, OutlinedInput, InputAdornment, FormControl, InputLabel, Autocomplete, TextField } from "@mui/material";
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -12,6 +13,19 @@ import Typography from '@mui/material/Typography';
 const options = ['Separación'];
 
 export default function DialogInputsByIconButton() {
+
+  const { enqueueSnackbar } = useSnackbar();
+
+  const notistackSave = () => {
+    enqueueSnackbar("Cambios guardados con éxito", {
+      variant: "success",
+      anchorOrigin: {
+        vertical: "top",
+        horizontal: "right",
+      },
+    });
+  };
+
   const [open1, setOpen1] = React.useState(false);
 
   const handleClickOpen1 = () => {
@@ -91,7 +105,9 @@ export default function DialogInputsByIconButton() {
         <Button onClick={() => setOpen1(false)} variant="text">
           Cancelar
         </Button>
-        <Button onClick={() => setOpen1(false)} variant="contained">
+        <Button 
+        onClick={() => {setOpen1(false);notistackSave()}} 
+         variant="contained">
           Guardar
         </Button>
 

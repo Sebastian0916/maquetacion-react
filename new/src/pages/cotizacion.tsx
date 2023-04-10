@@ -315,10 +315,12 @@ export default function Cotizacion() {
                             </Box>
                     </CardContent>
                 </Card>
-                {/* <DialogPersonalDataByIconButton/> */}
+                <Box sx={{display:"flex", gap:"4px"}}>
+                <DialogPersonalDataByIconButton/>
                 <Link style={{textDecoration: 'none'}} to="/CotizacionVPN">
-                    <Button variant="contained">Detalle Cotización</Button>
+                    <Button variant="contained">Cotización por VPN*</Button>
                 </Link>
+                </Box>
             </Box>
             <Card sx={{ width: "415px", height: "404px", backgroundColor: "#fff", display: "flex", flexDirection: "column", alignItems: "flex-start", float: "right" }}>
                 {/* <CardHeader> */}

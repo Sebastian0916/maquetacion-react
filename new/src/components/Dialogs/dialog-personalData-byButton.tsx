@@ -4,6 +4,7 @@ import { Autocomplete, Box, Button, CardMedia, DialogActions, DialogContent, Dia
 import Typography from '@mui/material/Typography';
 import Ilustracion2 from "../../assets/ilustracion2.png"
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import { Link } from 'react-router-dom';
 
 const options = ['Seleccione una opción'];
 
@@ -60,11 +61,11 @@ export default function DialogPersonalDataByIconButton() {
         <Button onClick={() => { setOpen1(true); setOpen(false) }} variant="text">
           Registro rapido
         </Button>
-
-        <Button onClick={() => setOpen(false)} variant="text">
-          Registro completo
-        </Button>
-
+        <Link style={{ textDecoration: 'none' }} to="/Registro">
+          <Button onClick={() => setOpen(false)} variant="text">
+            Registro completo
+          </Button>
+        </Link>
       </DialogActions>
     </Dialog>
 
@@ -96,7 +97,7 @@ export default function DialogPersonalDataByIconButton() {
             defaultValue="viviana.contreras@sinco.com.co"
           />
 
-          <FormLabel required id="demo-radio-buttons-group-label">Gender</FormLabel>
+          <FormLabel required id="demo-radio-buttons-group-label">Genero</FormLabel>
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="Masculino"
@@ -174,9 +175,11 @@ export default function DialogPersonalDataByIconButton() {
         <Button onClick={() => setOpen2(false)} variant="text">
           Cancelar
         </Button>
-        <Button onClick={() => setOpen2(false)} variant="contained">
-          Enviar Cotización
-        </Button>
+        <Link style={{ textDecoration: 'none' }} to="/CotizacionExitosa">
+          <Button onClick={() => setOpen2(false)} variant="contained">
+            Enviar Cotización
+          </Button>
+        </Link>
       </DialogActions>
     </Dialog>
 

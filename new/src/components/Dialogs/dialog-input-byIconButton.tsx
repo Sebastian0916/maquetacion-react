@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
+import { useSnackbar } from "notistack";
 
 import { Alert, Box, Button, DialogActions, DialogContent, OutlinedInput, InputAdornment, FormControl, InputLabel } from "@mui/material";
 
@@ -9,6 +10,19 @@ import EditIcon from '@mui/icons-material/Edit';
 import Typography from '@mui/material/Typography';
 
 export default function DialogInputByIconButton() {
+
+  const { enqueueSnackbar } = useSnackbar();
+
+  const notistackSave = () => {
+    enqueueSnackbar("Cambios guardados con éxito", {
+      variant: "success",
+      anchorOrigin: {
+        vertical: "top",
+        horizontal: "right",
+      },
+    });
+  };
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -64,7 +78,10 @@ export default function DialogInputByIconButton() {
         <Button onClick={() => setOpen(false)} variant="text">
           Cancelar
         </Button>
-        <Button onClick={() => setOpen(false)} variant="contained">
+        <Button 
+        onClick={() => {setOpen(false);notistackSave()}} 
+        variant="contained"
+        >
           Guardar
         </Button>
 
