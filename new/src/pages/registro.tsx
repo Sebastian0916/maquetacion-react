@@ -145,7 +145,7 @@ export default function Registro() {
                         sx={{ width: "244px" }}
                     />
                     <Box sx={{ width: "244px", height: "36px" }}>
-                        <Box sx={{ height: "14px" }}>
+                        <Box sx={{ height: "20px", lineHeight:"0" }}>
                             <FormLabel
                                 sx={{ "&.MuiFormLabel-root": { fontSize: "12px!important" } }}
                                 required
@@ -160,7 +160,7 @@ export default function Registro() {
                             name="radio-buttons-group"
                             sx={{ width: "244px", "&.MuiRadioGroup-root": { height: "20px" } }}
                         >
-                            <Box sx={{ height: "20px" }}>
+                            <Box sx={{ height: "20px", mt:"-8px" }}>
                                 <FormControlLabel sx={{ height: "20px" }} value="Masculino" control={<Radio size="small" />} label="Masculino" />
                                 <FormControlLabel sx={{ height: "20px" }} value="Femenino" control={<Radio size="small" />} label="Femenino" />
                             </Box>

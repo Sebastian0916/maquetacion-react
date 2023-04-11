@@ -60,19 +60,18 @@ export default function ProyectoEnVentaMap() {
         </Box>
         <Grid>
 
-            <Grid item sm={6} sx={{ display: "flex", float: "left", ml:"16px" }}>
-                <Box sx={{ width: "563px", height: "459px", position: "absolute" }}>
+            <Grid item sm={6} sx={{ display: "flex", float: "left", ml:"16px", mt:"8px" }}>
+                <Box sx={{ width: "563px", height: "459px"}}>
                     <CardMedia
-                        sx={{ position: "absolute" }}
                         component="img"
                         image={image11}
                         alt="Apartamentos Chicala"
                     ></CardMedia>
-                    <Box sx={{ width: "563px", height: "459px", position: "relative" }}>
+                    {/* <Box sx={{ width: "563px", height: "459px", position: "relative" }}>
                         <RelativeMenuMap1 />
                         <RelativeMenuMap2 />
                         <RelativeMenuMap3 />
-                    </Box>
+                    </Box> */}
                 </Box>
             </Grid>
             <Grid item sm={6} sx={{overflowY:"scroll", width:"588px", height:"487px", display: "flex", float: "right", mr:"16px"}}>

@@ -63,7 +63,7 @@ export default function SeleccionDelInmueble() {
         <Box sx={{ display: "flex", flexWrap: "wrap", float: "right", height: "557px", width: "912px", overflowY: "scroll" }}>
             <Card sx={{ width: "876px", height: "146px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", backgroundColor: "#fff", mt: "12px", mx: "auto" }}>
                 <CardContent sx={{ display: "flex", gap: "4px", justifyContent: "space-between", alignItems: "center", flexDirection: "row", width: "844px", height: "90px" }}>
-                    <Box sx={{ width: "364px", height: "72px", display: "flex", flexDirection: "column" }}>
+                    <Box sx={{ width: "364px", height: "72px", display: "flex", flexDirection: "column", gap:"4px" }}>
                         <Typography variant="subtitle1" color="text.primary">Chicala E1 - Apartamento tipo único 52mts - Área privada</Typography>
                         <Typography variant="subtitle2" color="primary">Características</Typography>
                         <Typography variant="subtitle2" color="text.secondary">Área construida 45,42mts m2 aprox Área Privada 39.80 aprox</Typography>

@@ -10,7 +10,6 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-
 const options = ['Chicala Etapa 1 - Altos de Montecielo del norte I', 'Chicala Etapa 1 - Altos de Montecielo del norte II','Chicala Etapa 1 - Altos de Montecielo del norte III','Chicala Etapa 1 - Altos de Montecielo del norte IV','Chicala Etapa 1 - Altos de Montecielo del norte V','Chicala Etapa 1 - Altos de Montecielo del norte VI','Chicala Etapa 1 - Altos de Montecielo del norte VII'];
 
 export default function SplitButton() {
@@ -82,12 +81,12 @@ export default function SplitButton() {
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu" autoFocusItem>
                   {options.map((option, index) => (
-                    <MenuItem
+                   <MenuItem 
                       key={option}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
-                    >
-                      {option}
+                    ><Link style={{textDecoration: 'none'}} to="/SeleccionDelInmueble">
+                      {option}</Link>
                     </MenuItem>
                   ))}
                 </MenuList>

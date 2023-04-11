@@ -5,10 +5,11 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import SendIcon from '@mui/icons-material/Send';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import CheckIcon from '@mui/icons-material/Check';
 import DialogInputByIconButton from "../components/Dialogs/dialog-input-byIconButton";
 import DialogInputsByIconButton from "../components/Dialogs/dialog-inputs-byIconButton";
+import { Link } from "react-router-dom";
 
 
 export default function CotizacionVPN() {
@@ -141,9 +142,11 @@ export default function CotizacionVPN() {
                     <Button size="small" disabled variant="contained" startIcon={<SaveIcon />}>
                         Guardar
                     </Button>
+                    <Link style={{textDecoration: 'none'}} to="/CotizacionVolanteVPN">
                     <Button size="small" variant="contained" startIcon={<SendIcon />}>
                         Enviar
                     </Button>
+                    </Link> 
                 </Box>
             </Box>
 
@@ -189,7 +192,7 @@ export default function CotizacionVPN() {
                             </TableCell>
 
                             <TableCell>
-                                <Typography sx={{display:"flex", alignItems:"center", gap:"4px"}}> 01/01/2023 <IconButton><CalendarTodayIcon fontSize="small" color="primary"></CalendarTodayIcon></IconButton></Typography>
+                                <Typography sx={{display:"flex", alignItems:"center", gap:"4px"}}> 01/01/2023 <IconButton><CalendarMonthOutlinedIcon fontSize="small" color="primary"></CalendarMonthOutlinedIcon></IconButton></Typography>
                             </TableCell>
 
                             <TableCell>
@@ -216,7 +219,7 @@ export default function CotizacionVPN() {
                             </TableCell>
 
                             <TableCell>
-                            <Typography sx={{display:"flex", alignItems:"center", gap:"4px"}} color="primary"> 01/01/2023 <IconButton><CalendarTodayIcon fontSize="small" color="primary"></CalendarTodayIcon></IconButton></Typography>
+                            <Typography sx={{display:"flex", alignItems:"center", gap:"4px"}} color="primary"> 01/01/2023 <IconButton><CalendarMonthOutlinedIcon fontSize="small" color="primary"></CalendarMonthOutlinedIcon></IconButton></Typography>
                             </TableCell>
 
                             <TableCell>

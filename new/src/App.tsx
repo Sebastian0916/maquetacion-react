@@ -10,6 +10,8 @@ import Cotizacion from "./pages/cotizacion";
 import CotizacionExitosa from "./pages/cotizacion-envio-exitoso";
 import CotizacionVPN from "./pages/cotizacion-vpn";
 import VolanteCotizacion from "./pages/volante-cotizacion";
+import VolanteCotizacionVPN from "./pages/volante-cotizacion-vpn";
+import ReservarVisita from "./pages/reservar-visita";
 
 
 
@@ -26,8 +28,10 @@ function App() {
         <Route path="/Cotizacion" element={<Cotizacion />} />
         <Route path="/CotizacionExitosa" element={<CotizacionExitosa />} />
         <Route path="/CotizacionVolante" element={<VolanteCotizacion />} />
+        <Route path="/CotizacionVolanteVPN" element={<VolanteCotizacionVPN />} />
         <Route path="/CotizacionVPN" element={<CotizacionVPN />} />
         <Route path="/Registro" element={<Registro />} />
+        <Route path="/ReservarVisita" element={<ReservarVisita />} />
       </Routes>
     </Box>
   );

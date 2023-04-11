@@ -17,7 +17,7 @@ export default function CotizacionExitosa() {
                     <Link style={{ textDecoration: 'none' }} to="/">
                         <Button variant="outlined" startIcon={<ChevronLeftIcon />}>Volver a proyectos</Button>
                     </Link>
-                    <Link style={{ textDecoration: 'none' }} to="/">
+                    <Link style={{ textDecoration: 'none' }} to="/ReservarVisita">
                         <Button variant="contained">Reservar visita</Button>
                     </Link>
                 </Box>

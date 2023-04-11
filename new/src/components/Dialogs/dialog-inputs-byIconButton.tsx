@@ -5,7 +5,7 @@ import Dialog from '@mui/material/Dialog';
 import { useSnackbar } from "notistack";
 
 import { Box, Button, DialogActions, DialogContent, OutlinedInput, InputAdornment, FormControl, InputLabel, Autocomplete, TextField } from "@mui/material";
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import Typography from '@mui/material/Typography';
@@ -86,7 +86,7 @@ export default function DialogInputsByIconButton() {
             <InputLabel htmlFor="Fecha">Fecha</InputLabel>
             <OutlinedInput
               id="Fecha"
-              startAdornment={<InputAdornment position="start"><CalendarTodayIcon></CalendarTodayIcon></InputAdornment>}
+              startAdornment={<InputAdornment position="start"><CalendarMonthOutlinedIcon/></InputAdornment>}
               label="Fecha"
               defaultValue={"01/01/2023"}
             />

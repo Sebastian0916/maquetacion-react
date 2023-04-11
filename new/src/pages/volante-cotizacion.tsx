@@ -5,6 +5,7 @@ import LocalPrintshopOutlinedIcon from '@mui/icons-material/LocalPrintshopOutlin
 import Blueprint from "../assets/image13-thumb.png";
 import TextImage from "../assets/text.png"
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import { Link } from "react-router-dom";
 export default function VolanteCotizacion() {
     return (<>
         <NavBarCotizacionVolante />
@@ -15,8 +16,10 @@ export default function VolanteCotizacion() {
                     Descargar plantilla</Button>
                 <Button startIcon={<LocalPrintshopOutlinedIcon />} size="small" variant="text">
                     Imprimir Formulario</Button>
-                <Button size="small" variant="contained">
-                    Enviar cotización</Button>
+                <Link style={{textDecoration: 'none'}} to="/CotizacionExitosa">
+                    <Button size="small" variant="contained">
+                        Enviar cotización</Button>
+                </Link>
             </Box>
 
             <Card sx={{ width: "1166px", height: "147px", mx: "auto" }}>
@@ -120,7 +123,7 @@ export default function VolanteCotizacion() {
             <Card sx={{ width: "1166px", height: "190px", mx: "auto" }}>
                 <CardContent sx={{ display: "flex", gap: "8px", alignItems: "center" }}>
                     <Box sx={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-                        <Typography variant="h6" color="primary">Información personal del visitante</Typography>
+                        <Typography variant="h6" color="primary">Información del inmueble</Typography>
                         <Box sx={{ width: "554.5px", display: "flex", gap: "8px" }}>
                             <Typography variant="subtitle2" color="text.primary">
                                 Inmueble:
@@ -239,7 +242,7 @@ export default function VolanteCotizacion() {
             </Card>
 
             <Card sx={{ width: "1166px", height: "282px", mx: "auto" }}>
-                <CardContent sx={{ display: "flex", justifyContent: "space-between", gap: "8px", alignItems: "center", flexWrap:"wrap" }}>
+                <CardContent sx={{ display: "flex", justifyContent: "space-between", gap: "8px", alignItems: "center", flexWrap: "wrap" }}>
                     <Box sx={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                         <Typography variant="h6" color="primary">Forma de pago</Typography>
                         <Box sx={{ width: "554.5px", display: "flex", gap: "8px" }}>
@@ -361,6 +364,7 @@ export default function VolanteCotizacion() {
                         <FormControl sx={{ width: "549.5px" }}>
                             <InputLabel htmlFor="outlined-adornment-amount">Valor aproximado de cuota de administración</InputLabel>
                             <OutlinedInput
+                                readOnly
                                 id="outlined-adornment-amount"
                                 startAdornment={<InputAdornment position="start">$</InputAdornment>}
                                 label="Valor aproximado de cuota de administración"
@@ -370,6 +374,7 @@ export default function VolanteCotizacion() {
                         <FormControl sx={{ width: "549.5px" }}>
                             <InputLabel htmlFor="outlined-adornment-amount">Valor aproximado gastos de escrituración</InputLabel>
                             <OutlinedInput
+                                readOnly
                                 id="outlined-adornment-amount"
                                 startAdornment={<InputAdornment position="start">$</InputAdornment>}
                                 label="Valor aproximado gastos de escrituración"
@@ -377,10 +382,10 @@ export default function VolanteCotizacion() {
                             />
                         </FormControl>
                     </Box>
-                    <Box sx={{display:"flex"}}>
-                        <Box sx={{width:"556px"}}>
+                    <Box sx={{ display: "flex" }}>
+                        <Box sx={{ width: "556px" }}>
                             <Typography variant="subtitle2" color="text.primary">Elaborado por: ADRIANA CAROLINA BERMUDEZ</Typography>
-                            <Box sx={{display:"flex", alignItems:"center", gap:"4px"}}><Typography color="text.secondary"><PhoneEnabledIcon fontSize="small" color="inherit"/></Typography><Typography variant="body2" color="text.secondary">428 0660</Typography></Box>
+                            <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}><Typography color="text.secondary"><PhoneEnabledIcon fontSize="small" color="inherit" /></Typography><Typography variant="body2" color="text.secondary">428 0660</Typography></Box>
                         </Box>
 
                         <Box>

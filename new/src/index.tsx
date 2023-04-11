@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material/styles';
 import { SincoTheme } from './Theme/SincoTheme';
-
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { BrowserRouter } from 'react-router-dom';
 
 import '@fontsource/nunito/300.css';
@@ -20,6 +21,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
 import { SnackbarProvider } from 'notistack';
 
 const root = ReactDOM.createRoot(
@@ -30,7 +32,9 @@ root.render(
     <ThemeProvider theme={SincoTheme}>
     <BrowserRouter>
     <SnackbarProvider>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
     <App />
+    </LocalizationProvider>
     </SnackbarProvider>
     </BrowserRouter>
     </ThemeProvider>
