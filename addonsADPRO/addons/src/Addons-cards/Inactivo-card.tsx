@@ -6,6 +6,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
+import MoreVertMenu from "../components/more-vert-menu";
 
 export default function InactivoCard() {
 
@@ -86,9 +87,7 @@ export default function InactivoCard() {
                             ml:"-5px"
                         }}>
                             <Button variant="text">Activar</Button>
-                            <IconButton>
-                                <MoreVertOutlinedIcon color="primary" />
-                            </IconButton>
+                            <MoreVertMenu></MoreVertMenu>
                         </Box>
                     </Box>
                 </AccordionSummary>

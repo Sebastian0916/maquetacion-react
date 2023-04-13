@@ -6,6 +6,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
+import MoreVertMenu from "../components/more-vert-menu";
 
 export default function ActivoCard() {
 
@@ -84,9 +85,7 @@ export default function ActivoCard() {
                             gap: "4px",
                             alignItems: "center"
                         }}>
-                            <IconButton>
-                                <MoreVertOutlinedIcon color="primary" />
-                            </IconButton>
+                            <MoreVertMenu></MoreVertMenu>
                         </Box>
                     </Box>
                 </AccordionSummary>

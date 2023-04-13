@@ -8,7 +8,7 @@ import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import MoreVertMenu from "../components/more-vert-menu";
 
-export default function ErrorCard() {
+export default function InactivoAltCard() {
 
     const [expand, setExpand] = React.useState(false);
     const toggleAccordion = () => {
@@ -25,7 +25,7 @@ export default function ErrorCard() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    borderLeft: "10px solid #B136B4"
+                    borderLeft: "10px solid #D14343"
                 }}>
                 {/* CardContent */}
                 <AccordionSummary
@@ -86,7 +86,7 @@ export default function ErrorCard() {
                             alignItems: "center"
                         }}>
                             <Button variant="text">Activar</Button>
-                            <MoreVertMenu></MoreVertMenu>
+                            <MoreVertMenu />
                         </Box>
                     </Box>
                 </AccordionSummary>
