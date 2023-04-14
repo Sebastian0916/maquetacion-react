@@ -51,7 +51,7 @@ export default function Addons() {
 
 
     return (<>
-        <Box sx={{ width: "1224px", height: "561px", display: "flex", ml: "21px", mt: "17px" }}>
+        <Box sx={{ width: "1204px", height: "561px", display: "flex", ml: "21px", pt: "17px" }}>
             <Box sx={{
                 float: "left",
                 width: "820px",

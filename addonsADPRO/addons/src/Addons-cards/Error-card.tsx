@@ -7,6 +7,7 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import MoreVertMenu from "../components/more-vert-menu";
+import ActivacionAddon from "../components/activación";
 
 export default function ErrorCard() {
 
@@ -66,10 +67,6 @@ export default function ErrorCard() {
                                 <Typography variant="subtitle2" color="text.primary">
                                 -135 Observaciones por insumo en el formato de impresión de OC
                                 </Typography>
-                                <IconButton
-                                    title="Addon no estándar, configurable desde encuestas de configuración, afecta procesos de integración contable y/o solo se activa para esquemas de negocio específicos."
-                                ><InfoOutlinedIcon color="primary" />
-                                </IconButton>
                                 <Chip
                                     title="Módulo requerido"
                                     size="small"
@@ -85,7 +82,7 @@ export default function ErrorCard() {
                             gap: "4px",
                             alignItems: "center"
                         }}>
-                            <Button variant="text">Activar</Button>
+                            <ActivacionAddon/>
                             <MoreVertMenu></MoreVertMenu>
                         </Box>
                     </Box>
