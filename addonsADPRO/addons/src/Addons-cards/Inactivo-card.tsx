@@ -65,7 +65,7 @@ export default function InactivoCard() {
                                 gap: "4px"
                             }}>
                                 <Typography variant="subtitle2" color="text.primary">
-                                    -134 Observaciones de datos iniciales: Agrupaciones, tipos de insumo y unidades de medida
+                                -134 Migración de datos iniciales: Agrupaciones, tipos de insumo y unidades de medida
                                 </Typography>
                                 <Chip
                                     title="Módulo requerido"

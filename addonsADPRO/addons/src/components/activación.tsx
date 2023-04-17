@@ -1,5 +1,6 @@
-import { Box, Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Divider, Alert, Checkbox, TextField, Chip } from "@mui/material"
+import { Box, Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Divider, Alert, Checkbox, TextField, Chip, Snackbar, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, InputAdornment, IconButton } from "@mui/material"
 import React from "react"
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 export default function ActivacionAddon() {
 
     const [openActivate, setOpenActivate] = React.useState(false)
@@ -13,14 +14,6 @@ export default function ActivacionAddon() {
     }
 
     const [openActivate2, setOpenActivate2] = React.useState(false)
-
-    const handleOpenActivate2 = () => {
-        setOpenActivate2(true)
-    }
-
-    const handleCloseActivate2 = () => {
-        setOpenActivate(false)
-    }
 
     const [activateCheck1, setActivateCheck1] = React.useState(false)
 
@@ -39,6 +32,24 @@ export default function ActivacionAddon() {
     }
     const handleDeactivateCheck2 = () => {
         setActivateCheck2(false)
+    }
+
+    const [activateCheck3, setActivateCheck3] = React.useState(false)
+
+    const handleCheck3 = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setActivateCheck3(event.target.checked);
+    };
+
+    const [openSnack, setOpenSnack] = React.useState(false)
+
+    const handleOpenSnack = () => {
+        setOpenSnack(true)
+    }
+
+    const [hdMenu, setHdMenu] = React.useState('');
+
+    const handleSelectChange = (event: SelectChangeEvent) => {
+        setHdMenu(event.target.value as string);
     }
 
     return (<>
@@ -107,11 +118,11 @@ export default function ActivacionAddon() {
                 </Box>
             </DialogContent>
             <DialogActions>
-                <Button variant="text" onClick={()=>setOpenActivate2(false)}>
+                <Button variant="text" onClick={handleCloseActivate}>
                     Cancelar
                 </Button>
 
-                <Button variant="contained" onClick={() => { setOpenActivate(false); setOpenActivate2(true)}}>
+                <Button variant="contained" onClick={() => { setOpenActivate(false); setOpenActivate2(true) }}>
                     Activar
                 </Button>
             </DialogActions>
@@ -119,17 +130,140 @@ export default function ActivacionAddon() {
         <Dialog
             fullWidth
             open={openActivate2}
-            onClose={()=>setOpenActivate2(false)}
+            onClose={() => setOpenActivate2(false)}
         >
             <DialogTitle>
                 <Typography variant="h6" color="text.primary">
                     Confirmación
                 </Typography>
             </DialogTitle>
+            <DialogContent sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px"
+            }}>
+                <Alert severity="info">
+                    <Typography variant="body2" color="text.primary">
+                        Activación del Addon Migración de datos iniciales: agrupaciones, tipos de insumo y unidades de medida.
+                    </Typography>
+                </Alert>
+                <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">Hd asociado</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={hdMenu}
+                        label="Hd asociado"
+                        onChange={handleSelectChange}
+                    >
+                        <MenuItem value={1}>Hd no.1</MenuItem>
+                        <MenuItem value={2}>Hd no.2</MenuItem>
+                        <MenuItem value={3}>Hd no.3</MenuItem>
+                        <MenuItem value={4}>Hd no.4</MenuItem>
+                    </Select>
+                </FormControl>
+                <TextField
+                    inputProps={{
+                        style: {
+                            height: "68px",
+                        },
+                    }}
+                    fullWidth
+                    label="Observaciones"
+                    type="text"
+                >
+                </TextField>
+                <Divider />
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Checkbox
+                        onChange={handleCheck3}
+                        checked={activateCheck3}
+                    />
+                    <Typography variant="body2" color="text.primary">Enviar por correo electrónico para facturación</Typography>
+                </Box>
+                {activateCheck3 &&
+
+                    <Box sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "12px"
+                    }}>
+
+                        <TextField
+                            fullWidth
+                            label="Para:"
+                            defaultValue="sergio.vergara@sinco.com.co"
+                            InputProps={{
+                                style: {
+                                    height: "38px",
+                                },
+                                startAdornment:
+                                    <InputAdornment
+                                        position="start">
+                                        <Chip
+                                            size="small"
+                                            label="viviana.contreras@sinco.com.co"
+                                        />
+                                    </InputAdornment>,
+                            }}
+                        />
+                        <TextField
+                            fullWidth
+                            label="De:" InputProps={{
+                                style: {
+                                    height: "38px",
+                                },
+                                startAdornment:
+                                    <InputAdornment
+                                        position="start">
+                                        <Chip
+                                            size="small"
+                                            label="carlos.cipagauta@sinco.com.co"
+                                        />
+                                    </InputAdornment>,
+                            }}
+                        />
+                        <Box sx={{ display: "flex", gap: "12px", alignItems:"center" }}>
+                            <Box sx={{ display: "flex", gap: "4px", alignItems:"center" }}>
+                                <IconButton>
+                                    <InfoOutlinedIcon></InfoOutlinedIcon>
+                                </IconButton>
+                                <Typography variant="subtitle2" color="text.primary">Entorno principal:</Typography>
+                                <Typography variant="body2" color="text.primary">00:00 p.m.</Typography>
+                            </Box>
+                            <Divider orientation="vertical" sx={{ height: "18px" }} />
+                            <Box sx={{ display: "flex", gap: "4px", alignItems:"center" }}>
+                                <IconButton>
+                                    <InfoOutlinedIcon></InfoOutlinedIcon>
+                                </IconButton>
+                                <Typography variant="subtitle2" color="text.primary">Base de datos:</Typography>
+                                <Typography variant="body2" color="text.primary">00:00 p.m.</Typography>
+                            </Box>
+                            <Divider orientation="vertical" sx={{ height: "18px" }} />
+                            <Box sx={{ display: "flex", gap: "4px", alignItems:"center" }}>
+                                <Typography variant="subtitle2" color="text.primary">Total:</Typography>
+                                <Typography variant="body2" color="text.primary">0</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                }
+            </DialogContent>
             <DialogActions>
-                <Button onClick={()=>setOpenActivate2(false)} variant="text">Cancelar</Button>
-                <Button onClick={()=>setOpenActivate2(false)} variant="contained">Aceptar</Button>
+                <Button onClick={() => setOpenActivate2(false)} variant="text">Cancelar</Button>
+                <Button onClick={() => { setOpenActivate2(false); handleOpenSnack() }} variant="contained">Aceptar</Button>
             </DialogActions>
         </Dialog>
+        <Snackbar
+            open={openSnack}
+            autoHideDuration={3000}
+            onClose={() => setOpenSnack(false)}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        >
+            <Alert
+                severity="success"
+            >
+                Addón activado con exito
+            </Alert>
+        </Snackbar>
     </>)
 }

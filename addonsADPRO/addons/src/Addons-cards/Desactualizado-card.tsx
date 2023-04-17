@@ -122,7 +122,7 @@ export default function DesactualizadoCard() {
                                     }}
                                         variant="dot"
                                         badgeContent=" "
-                                        color="error">
+                                        color="success">
                                     </Badge>
                                 </Box>
                             </AccordionSummary>
@@ -184,14 +184,15 @@ export default function DesactualizadoCard() {
                                     <Typography
                                         variant="subtitle2"
                                         color="text.primary">
-                                        ADPConfig
+                                        Menus
                                     </Typography>
                                     <Badge sx={{
+                                         ".MuiBadge-badge": { backgroundColor: "#FFD25E!important" },
                                         left: "4px"
                                     }}
                                         variant="dot"
                                         badgeContent=" "
-                                        color="error">
+                                        >
                                     </Badge>
                                 </Box>
                             </AccordionSummary>
@@ -276,15 +277,17 @@ export default function DesactualizadoCard() {
                                         <TableHead>
                                             <TableRow>
                                                 <TableCell>Descripción</TableCell>
-                                                <TableCell align="center"><CheckCircleRoundedIcon /></TableCell>
-                                                <TableCell align="center"><WarningRoundedIcon /></TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             <TableRow>
-                                                <TableCell sx={{ width: "571.15px" }}>ActivaPrePre&gt;--&gt;SinDescripción</TableCell>
-                                                <TableCell align="center">1</TableCell>
-                                                <TableCell align="center">0</TableCell>
+                                                <TableCell>81009&gt;--&gt;Niveles &gt;&gt; Valor recomendado:0 | Valor Actual:(0)</TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>81016&gt;--&gt;EDT &gt;&gt; Valor recomendado:1 | Valor Actual:(1)</TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>85011&gt;--&gt;Seguimiento EDT &gt;&gt; Valor recomendado:1 | Valor Actual:(1)</TableCell>
                                             </TableRow>
                                         </TableBody>
                                     </Table>
@@ -326,7 +329,7 @@ export default function DesactualizadoCard() {
                                     </Typography>
                                     <Badge sx={{
                                         // 
-                                        ".MuiBadge-badge": { backgroundColor: "#FB8500!important" },
+                                        ".MuiBadge-badge": { backgroundColor: "#FFD25E!important" },
                                         left: "4px"
                                     }}
                                         variant="dot"
@@ -347,15 +350,23 @@ export default function DesactualizadoCard() {
                                         <TableHead>
                                             <TableRow>
                                                 <TableCell>Descripción</TableCell>
-                                                <TableCell align="center"><CheckCircleRoundedIcon /></TableCell>
-                                                <TableCell align="center"><WarningRoundedIcon /></TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             <TableRow>
-                                                <TableCell sx={{ width: "571.15px" }}>ActivaPrePre&gt;--&gt;SinDescripción</TableCell>
-                                                <TableCell align="center">1</TableCell>
-                                                <TableCell align="center">0</TableCell>
+                                                <TableCell>81009&gt;--&gt;Niveles &gt;&gt; Valor recomendado:0 | Valor Actual:(0)</TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>81016&gt;--&gt;EDT &gt;&gt; Valor recomendado:1 | Valor Actual:(1)</TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>85011&gt;--&gt;Seguimiento EDT &gt;&gt; Valor recomendado:1 | Valor Actual:(1)</TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>85011&gt;--&gt;Seguimiento EDT &gt;&gt; Valor recomendado:1 | Valor Actual:(1)</TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>85011&gt;--&gt;Seguimiento EDT &gt;&gt; Valor recomendado:1 | Valor Actual:(1)</TableCell>
                                             </TableRow>
                                         </TableBody>
                                     </Table>

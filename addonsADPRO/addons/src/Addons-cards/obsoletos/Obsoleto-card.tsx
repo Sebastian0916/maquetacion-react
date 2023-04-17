@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Chip, IconButton, Typography, Accordion, AccordionSummary, AccordionDetails, Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Button } from "@mui/material";
+import { Box, Typography, Accordion, AccordionSummary, AccordionDetails, Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Button } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 
@@ -62,7 +61,7 @@ export default function ObsoletoCard() {
                                 gap: "4px"
                             }}>
                                 <Typography variant="subtitle2" color="text.secondary">
-                                -99 Nueva versión de informes de contratos
+                                    -99 Nueva versión de informes de contratos
                                 </Typography>
                             </Box>
                         </Box>
@@ -113,16 +112,16 @@ export default function ObsoletoCard() {
                                     <Table>
                                         <TableHead>
                                             <TableRow>
-                                                <TableCell sx={{width:"571.15px"}}><Typography variant="subtitle2" color="text.secondary">Descripción</Typography></TableCell>
-                                                <TableCell align="center"><CheckCircleRoundedIcon/></TableCell>
-                                                <TableCell align="center"><WarningRoundedIcon/></TableCell>
+                                                <TableCell sx={{ width: "571.15px" }}><Typography variant="subtitle2" color="text.secondary">Descripción</Typography></TableCell>
+                                                <TableCell align="center"><CheckCircleRoundedIcon /></TableCell>
+                                                <TableCell align="center"><WarningRoundedIcon /></TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             <TableRow>
-                                                <TableCell>ActivaPrePre -- SinDescripción</TableCell>
-                                                <TableCell align="center">1</TableCell>
-                                                <TableCell align="center">0</TableCell>
+                                                <TableCell><Typography variant="body2" color="text.secondary"> ActivaPrePre -- SinDescripción</Typography></TableCell>
+                                                <TableCell align="center"><Typography variant="subtitle2" color="text.secondary">1</Typography></TableCell>
+                                                <TableCell align="center"><Typography variant="subtitle2" color="text.secondary">0</Typography></TableCell>
                                             </TableRow>
                                         </TableBody>
                                     </Table>
@@ -135,7 +134,7 @@ export default function ObsoletoCard() {
                         border: "1px solid rgba(16, 24, 64, 0.18)",
                         borderRadius: "4px"
                     }}>
-                                    <Accordion>
+                        <Accordion>
                             <AccordionSummary
                                 sx={{
                                     "$.Mui-expanded": { height: "58px" },
@@ -170,16 +169,64 @@ export default function ObsoletoCard() {
                                     <Table>
                                         <TableHead>
                                             <TableRow>
-                                                <TableCell sx={{width:"571.15px"}}><Typography variant="subtitle2" color="text.secondary">Descripción</Typography></TableCell>
-                                                <TableCell align="center"><CheckCircleRoundedIcon/></TableCell>
-                                                <TableCell align="center"><WarningRoundedIcon/></TableCell>
+                                                <TableCell sx={{ width: "571.15px" }}><Typography variant="subtitle2" color="text.secondary">Descripción</Typography></TableCell>
+                                                <TableCell align="center"><CheckCircleRoundedIcon /></TableCell>
+                                                <TableCell align="center"><WarningRoundedIcon /></TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             <TableRow>
-                                                <TableCell>ActivaPrePre -- SinDescripción</TableCell>
-                                                <TableCell align="center">1</TableCell>
-                                                <TableCell align="center">0</TableCell>
+                                                <TableCell><Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                                    <Typography variant="body2" color="text.secondary">
+                                                        4902&gt;--&gt;ADPRO/Mantenimiento/Insumos/Centrales/INSUMOS/INSU...
+                                                    </Typography>
+                                                </Box></TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 1 </Typography></TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 0 </Typography></TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>
+                                                    <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                                        <Typography variant="body2" color="text.secondary">
+                                                            4902&gt;--&gt;ADPRO/Mantenimiento/Insumos/Centrales
+                                                        </Typography>
+                                                    </Box>
+                                                </TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 1 </Typography></TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 0 </Typography></TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>
+                                                    <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                                        <Typography variant="body2" color="text.secondary">
+                                                            4902&gt;--&gt;ADPRO/Mantenimiento/Insumos/Centrales
+                                                        </Typography>
+                                                    </Box>
+                                                </TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> <TextsmsOutlinedIcon color="inherit" /> </Typography> </TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> <TextsmsOutlinedIcon color="inherit" /> </Typography> </TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>
+                                                    <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                                        <Typography variant="body2" color="text.secondary">
+                                                            4902&gt;--&gt;ADPRO/Mantenimiento/Insumos/Centrales
+                                                        </Typography>
+                                                    </Box>
+                                                </TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 1 </Typography></TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 0 </Typography></TableCell>
+                                            </TableRow>
+                                            <TableRow>
+                                                <TableCell>
+                                                    <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                                        <Typography variant="body2" color="text.secondary">
+                                                            4902&gt;--&gt;ADPRO/Mantenimiento/Insumos/Centrales
+                                                        </Typography>
+                                                    </Box>
+                                                </TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 1 </Typography></TableCell>
+                                                <TableCell align="center"> <Typography variant="body2" color="text.secondary"> 0 </Typography></TableCell>
                                             </TableRow>
                                         </TableBody>
                                     </Table>
