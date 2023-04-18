@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, Box, Chip, IconButton, Typography, Accordion, AccordionSummary, Button, AccordionDetails, Table, TableHead, TableBody, TableRow, TableCell, TableContainer } from "@mui/material";
+import { Tooltip, Badge, Box, Chip, IconButton, Typography, Accordion, AccordionSummary, Button, AccordionDetails, Table, TableHead, TableBody, TableRow, TableCell, TableContainer } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
@@ -36,7 +36,8 @@ export default function ErrorCard() {
                         flexDirection: "row-reverse",
                         justifyContent: "space-between",
                         gap: "8px",
-                        alignItems: "center"
+                        alignItems: "center",
+                        "&.Mui-expanded":{ minHeight:"48px" ,height:"48px"}
                     }}
                     expandIcon={<ExpandMoreIcon
                         color="primary"
@@ -67,13 +68,18 @@ export default function ErrorCard() {
                                 <Typography variant="subtitle2" color="text.primary">
                                 -135 Observaciones por insumo en el formato de impresión de OC
                                 </Typography>
+                                <Tooltip
+                                arrow
+                                placement="top"
+                                title="Módulo requerido">
                                 <Chip
-                                    title="Módulo requerido"
+                                   
                                     size="small"
                                     variant="outlined"
                                     label="A&F"
                                     color="primary"
                                 />
+                                </Tooltip>
                             </Box>
                         </Box>
                         <Box sx={{
@@ -88,6 +94,7 @@ export default function ErrorCard() {
                     </Box>
                 </AccordionSummary>
                 <AccordionDetails sx={{
+                    p:"0px 8px 16px",
                     display: "flex",
                     flexDirection: "column",
                     gap: "8px"

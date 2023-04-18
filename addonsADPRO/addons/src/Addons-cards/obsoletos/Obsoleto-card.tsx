@@ -47,6 +47,7 @@ export default function ObsoletoCard() {
                         justifyContent: "space-between",
                         gap: "8px",
                         alignItems: "center",
+                        "&.Mui-expanded":{ minHeight:"48px" ,height:"48px"}
                     }}>
                         <Box sx={{
                             width: "524px",
@@ -68,6 +69,7 @@ export default function ObsoletoCard() {
                     </Box>
                 </AccordionSummary>
                 <AccordionDetails sx={{
+                    p:"0px 8px 16px",
                     display: "flex",
                     flexDirection: "column",
                     gap: "8px"

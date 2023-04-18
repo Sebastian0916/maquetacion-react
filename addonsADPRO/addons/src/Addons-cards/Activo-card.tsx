@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Chip, IconButton, Typography, Accordion, AccordionSummary, AccordionDetails, Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Badge } from "@mui/material";
+import { Tooltip, Box, Chip, IconButton, Typography, Accordion, AccordionSummary, AccordionDetails, Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Badge } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import MoreVertMenu from "../components/more-vert-menu";
+
 
 export default function ActivoCard() {
 
@@ -34,7 +35,8 @@ export default function ActivoCard() {
                         flexDirection: "row-reverse",
                         justifyContent: "space-between",
                         gap: "8px",
-                        alignItems: "center"
+                        alignItems: "center",
+                        "&.Mui-expanded":{ minHeight:"48px" ,height:"48px"}
                     }}
                     expandIcon={<ExpandMoreIcon
                         color="primary"
@@ -65,17 +67,26 @@ export default function ActivoCard() {
                                 <Typography variant="subtitle2" color="text.primary">
                                     -119 Insumo Central
                                 </Typography>
+                                <Tooltip
+                                title="Addon no estándar, configurable desde encuestas de configuración, afecta procesos de integración contable y/o solo se activa para esquemas de negocio específicos."
+                                placement="top"
+                                arrow>
                                 <IconButton
-                                    title="Addon no estándar, configurable desde encuestas de configuración, afecta procesos de integración contable y/o solo se activa para esquemas de negocio específicos."
                                 ><InfoOutlinedIcon color="primary" />
                                 </IconButton>
+                                </Tooltip>
+                                <Tooltip
+                                 title="Módulo requerido"
+                                 placement="top"
+                                 arrow>
                                 <Chip
-                                    title="Módulo requerido"
+                                   
                                     size="small"
                                     variant="outlined"
                                     label="A&F"
                                     color="primary"
                                 />
+                                </Tooltip>
                             </Box>
                         </Box>
                         <Box sx={{
@@ -89,6 +100,7 @@ export default function ActivoCard() {
                     </Box>
                 </AccordionSummary>
                 <AccordionDetails sx={{
+                    p:"0px 8px 16px",
                     display: "flex",
                     flexDirection: "column",
                     gap: "8px"

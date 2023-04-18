@@ -1,5 +1,8 @@
 import { Snackbar, Box, Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Divider, Alert, Checkbox, TextField, Chip } from "@mui/material"
 import React from "react"
+import WarningIcon from '@mui/icons-material/Warning';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import InfoIcon from '@mui/icons-material/Info';
 export default function ActualizacionAddon() {
 
     const [openActivate, setOpenActivate] = React.useState(false)
@@ -74,13 +77,13 @@ export default function ActualizacionAddon() {
                     </Box>
                 </Box>
                 {activateCheck1 &&
-                    <Alert severity="info">
+                    <Alert icon={<InfoIcon fontSize="medium" />} severity="info">
                         <Typography variant="body2" color="text.primary">
                             Genera la migración inmediata de los accesos
                         </Typography>
                     </Alert>}
                 {activateCheck2 &&
-                    <Alert severity="warning">
+                    <Alert icon={<WarningIcon fontSize="medium" />} severity="warning">
                         <Typography variant="body2" color="text.primary">
                             Desactiva opciones antiguas y migra accesos
                         </Typography>
@@ -88,17 +91,17 @@ export default function ActualizacionAddon() {
                 <Divider />
                 <Typography variant="subtitle2" color="primary">Tipo de producción</Typography>
                 <Box>
-                    <Box sx={{display:"flex", alignItems: "center" }}>
-                    <Checkbox />
-                    <Typography>Sinco</Typography>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Checkbox />
+                        <Typography>Sinco</Typography>
                     </Box>
-                    <Box sx={{display:"flex", alignItems: "center" }}>
-                    <Checkbox />
-                    <Typography>SincoConsolidacion</Typography>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Checkbox />
+                        <Typography>SincoConsolidacion</Typography>
                     </Box>
-                    <Box sx={{display:"flex", alignItems: "center" }}>
-                    <Checkbox />
-                    <Typography>SincoPrueba</Typography>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Checkbox />
+                        <Typography>SincoPrueba</Typography>
                     </Box>
                 </Box>
             </DialogContent>
@@ -107,22 +110,23 @@ export default function ActualizacionAddon() {
                     Cancelar
                 </Button>
 
-                <Button variant="contained" onClick={()=>{handleCloseActivate();handleOpenSnack()}}>
+                <Button variant="contained" onClick={() => { handleCloseActivate(); handleOpenSnack() }}>
                     Activar
                 </Button>
             </DialogActions>
         </Dialog>
         <Snackbar
-        open={openSnack}
-        autoHideDuration={3000}
-        onClose={() => setOpenSnack(false)}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      >
-        <Alert
-          severity="success"
+            open={openSnack}
+            autoHideDuration={3000}
+            onClose={() => setOpenSnack(false)}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
-          Addón actualizado con exito
-        </Alert>
-      </Snackbar>
+            <Alert
+                icon={<CheckCircleIcon fontSize="medium" />}
+                severity="success"
+            >
+                Addón actualizado con exito
+            </Alert>
+        </Snackbar>
     </>)
 }

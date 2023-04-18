@@ -1,4 +1,4 @@
-import {Paper, Box, Card, CardContent, Radio, FormControl, FormControlLabel, InputLabel, Autocomplete, TextField, Divider, Checkbox, Badge, Typography, Button, MenuItem, IconButton } from "@mui/material";
+import { Tooltip, Paper, Box, Card, CardContent, Radio, FormControl, FormControlLabel, InputLabel, Autocomplete, TextField, Divider, Checkbox, Badge, Typography, Button, MenuItem, IconButton } from "@mui/material";
 import FiltrosVigentes from "../Addons-cards/filtros/todos";
 import SearchIcon from '@mui/icons-material/Search';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
@@ -112,17 +112,24 @@ export default function Addons() {
                             }}
                             disablePortal
                             PaperComponent={({ children }) => (
-                                <Typography 
-                                variant="body2"
-                                color="text.primary"
-                                title="135 Observaciones por insumo en el formato HTML">
-                                    <Paper>{children}</Paper>
-                                    </Typography>
-                              )}
+
+                                <Typography
+                                    variant="body2"
+                                    color="text.primary"
+                                ><Tooltip
+                                    title="135 Observaciones por insumo en el formato HTML"
+                                    arrow
+                                    placement="top"
+                                >
+                                        <Paper>{children}</Paper>
+                                    </Tooltip>
+                                </Typography>
+
+                            )}
                             options={autocompleteMenu}
                             renderInput={(params) =>
                                 <TextField {...params} label="Buscar Addon" />
-                                 }
+                            }
                         />
                         <Box>
                             <Box>
@@ -157,7 +164,7 @@ export default function Addons() {
                                         </Box>
                                         <Box sx={{ display: "flex", alignItems: "center", width: "82px", height: "32px" }}>
                                             <Checkbox onChange={handleCheck3} checked={checked3} />
-                                            <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}><Badge badgeContent=" " variant="dot" sx={{ mr: "4px", ".MuiBadge-badge": { backgroundColor: "#FFD25E!important" } }} /><Typography variant="body1" color="text.primary">Desactualizado</Typography><IconButton sx={{ right: "8px" }} title="Se cataloga con desactualizados activados cuando antes la instalación del Addon no se apagó la versión anterior obsoleta"><InfoOutlinedIcon /></IconButton></Box>
+                                            <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}><Badge badgeContent=" " variant="dot" sx={{ mr: "4px", ".MuiBadge-badge": { backgroundColor: "#FFD25E!important" } }} /><Typography variant="body1" color="text.primary">Desactualizado</Typography><Tooltip arrow placement="top" title="Se cataloga con desactualizados activados cuando antes la instalación del Addon no se apagó la versión anterior obsoleta"><IconButton sx={{ right: "8px" }}><InfoOutlinedIcon /></IconButton></Tooltip></Box>
                                         </Box>
                                         <Box sx={{ display: "flex", alignItems: "center", width: "82px", height: "32px" }}>
                                             <Checkbox onChange={handleCheck4} checked={checked4} />
@@ -211,12 +218,12 @@ export default function Addons() {
 }
 
 const autocompleteMenu = [
-    { id: '1', label: '135 Observaciones por insumo en el formato...'},
-    { id: '2', label: '135 Observaciones por insumo en el formato...'},
-    { id: '3', label: '135 Observaciones por insumo en el formato...'},
-    { id: '4', label: '135 Observaciones por insumo en el formato...'},
-    { id: '5', label: '135 Observaciones por insumo en el formato...'},
-    { id: '6', label: '135 Observaciones por insumo en el formato...'},
-    { id: '7', label: '135 Observaciones por insumo en el formato...'},
-    { id: '8', label: '135 Observaciones por insumo en el formato...'},
+    { id: '1', label: '135 Observaciones por insumo en el formato...' },
+    { id: '2', label: '135 Observaciones por insumo en el formato...' },
+    { id: '3', label: '135 Observaciones por insumo en el formato...' },
+    { id: '4', label: '135 Observaciones por insumo en el formato...' },
+    { id: '5', label: '135 Observaciones por insumo en el formato...' },
+    { id: '6', label: '135 Observaciones por insumo en el formato...' },
+    { id: '7', label: '135 Observaciones por insumo en el formato...' },
+    { id: '8', label: '135 Observaciones por insumo en el formato...' },
 ]

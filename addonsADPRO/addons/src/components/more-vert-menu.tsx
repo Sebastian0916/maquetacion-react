@@ -6,6 +6,7 @@ import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
 import HistoryCard from "./history-card";
 import HistoryCardAlt from "./history-card-alt";
+import InfoIcon from '@mui/icons-material/Info';
 
 export default function MoreVertMenu() {
 
@@ -59,7 +60,7 @@ export default function MoreVertMenu() {
                 </Typography>
             </DialogTitle>
             <DialogContent sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                <Alert severity="info">
+                <Alert icon={<InfoIcon fontSize="medium" />} severity="info">
                     <AlertTitle>Descripción del Addon</AlertTitle>
                     <Typography sx={{ height: "40px" }} variant="body2" color="text.primary">
                         Reemplazado y estandarizado con el 60 nueva versión multiexplorador en pedidos de almacén, es parametrizable con la encuesta de configuración inicial.

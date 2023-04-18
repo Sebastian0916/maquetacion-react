@@ -35,7 +35,8 @@ export default function DesactualizadoCard() {
                         flexDirection: "row-reverse",
                         justifyContent: "space-between",
                         gap: "8px",
-                        alignItems: "center"
+                        alignItems: "center",
+                        "&.Mui-expanded":{ minHeight:"48px" ,height:"48px"}
                     }}
                     expandIcon={<ExpandMoreIcon
                         color="primary"
@@ -80,6 +81,7 @@ export default function DesactualizadoCard() {
                     </Box>
                 </AccordionSummary>
                 <AccordionDetails sx={{
+                    p:"0px 8px 16px",
                     display: "flex",
                     flexDirection: "column",
                     gap: "8px"

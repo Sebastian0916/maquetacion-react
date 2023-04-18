@@ -1,6 +1,10 @@
 import { Box, Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Divider, Alert, Checkbox, TextField, Chip, Snackbar, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, InputAdornment, IconButton } from "@mui/material"
 import React from "react"
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import InfoIcon from '@mui/icons-material/Info';
+import WarningIcon from '@mui/icons-material/Warning';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
 export default function ActivacionAddon() {
 
     const [openActivate, setOpenActivate] = React.useState(false)
@@ -89,13 +93,13 @@ export default function ActivacionAddon() {
                     </Box>
                 </Box>
                 {activateCheck1 &&
-                    <Alert severity="info">
+                    <Alert icon={<InfoIcon fontSize="medium" />} severity="info">
                         <Typography variant="body2" color="text.primary">
                             Genera la migración inmediata de los accesos
                         </Typography>
                     </Alert>}
                 {activateCheck2 &&
-                    <Alert severity="warning">
+                    <Alert icon={<WarningIcon fontSize="medium" />} severity="warning">
                         <Typography variant="body2" color="text.primary">
                             Desactiva opciones antiguas y migra accesos
                         </Typography>
@@ -142,7 +146,7 @@ export default function ActivacionAddon() {
                 flexDirection: "column",
                 gap: "12px"
             }}>
-                <Alert severity="info">
+                <Alert icon={<InfoIcon fontSize="medium" />} severity="info">
                     <Typography variant="body2" color="text.primary">
                         Activación del Addon Migración de datos iniciales: agrupaciones, tipos de insumo y unidades de medida.
                     </Typography>
@@ -223,8 +227,8 @@ export default function ActivacionAddon() {
                                     </InputAdornment>,
                             }}
                         />
-                        <Box sx={{ display: "flex", gap: "12px", alignItems:"center" }}>
-                            <Box sx={{ display: "flex", gap: "4px", alignItems:"center" }}>
+                        <Box sx={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                            <Box sx={{ display: "flex", gap: "4px", alignItems: "center" }}>
                                 <IconButton>
                                     <InfoOutlinedIcon></InfoOutlinedIcon>
                                 </IconButton>
@@ -232,7 +236,7 @@ export default function ActivacionAddon() {
                                 <Typography variant="body2" color="text.primary">00:00 p.m.</Typography>
                             </Box>
                             <Divider orientation="vertical" sx={{ height: "18px" }} />
-                            <Box sx={{ display: "flex", gap: "4px", alignItems:"center" }}>
+                            <Box sx={{ display: "flex", gap: "4px", alignItems: "center" }}>
                                 <IconButton>
                                     <InfoOutlinedIcon></InfoOutlinedIcon>
                                 </IconButton>
@@ -240,7 +244,7 @@ export default function ActivacionAddon() {
                                 <Typography variant="body2" color="text.primary">00:00 p.m.</Typography>
                             </Box>
                             <Divider orientation="vertical" sx={{ height: "18px" }} />
-                            <Box sx={{ display: "flex", gap: "4px", alignItems:"center" }}>
+                            <Box sx={{ display: "flex", gap: "4px", alignItems: "center" }}>
                                 <Typography variant="subtitle2" color="text.primary">Total:</Typography>
                                 <Typography variant="body2" color="text.primary">0</Typography>
                             </Box>
@@ -260,6 +264,7 @@ export default function ActivacionAddon() {
             anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
             <Alert
+                icon={<CheckCircleIcon fontSize="medium" />}
                 severity="success"
             >
                 Addón activado con exito
